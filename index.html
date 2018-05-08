@@ -34,11 +34,17 @@ var vndhijo="uno";
 var vlatuser=0;
 var vlnguser=0;
   function showAndroidToast(sid,st2,st2) {
-    document.getElementById("demo").innerHTML = "llama a  android";
-       vreturn=  window.Android.showToast(sid,st1,st2);
-       if("nodeh"==sid){vndhijo=  window.Android.showToast(sid,st1,st2);}
-       if("latm"==sid){vlatuser=  window.Android.showToast(sid,st1,st2);document.getElementById("demo").innerHTML = "llama a  android"+vlatuser ; vlatuser=4.628463;}
-       if("lngm"==sid){ vlnguser=  window.Android.showToast(sid,st1,st2);vlnguser=-74.137835;}
+  
+     //  vreturn=  window.Android.showToast(sid,st1,st2);
+       if("nodeh"===sid){vndhijo=  window.Android.showToast(sid,st1,st2);
+       }
+       if("latm"===sid){vlatuser=  window.Android.showToast(sid,st1,st2);
+       alert(555); 
+      document.getElementById("demo").innerHTML = "llama a  "+ vlatuser;
+        vlatuser=4.628463;
+     }
+       if("lngm"===sid){ vlnguser=  window.Android.showToast(sid,st1,st2);
+        vlnguser=-74.137835;}
  //document.getElementById("demo").innerHTML = vreturn+""+vlatuser+" " +vlnguser;
    //  alert(st);
     }
