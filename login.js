@@ -16,16 +16,15 @@ var markers = [];
 
 
 
-  var config = {
-    apiKey: "AIzaSyDjLCwvkZjT-Op9nNByGIqq9wGMmm-3dsI",
-    authDomain: "usertaxi-d0ca2.firebaseapp.com",
-    databaseURL: "https://usertaxi-d0ca2.firebaseio.com",
-    projectId: "usertaxi-d0ca2",
-    storageBucket: "usertaxi-d0ca2.appspot.com",
-    messagingSenderId: "505401637317"
+ var config = {
+    apiKey: "AIzaSyA_L67YUVbfzQbgNLFbOylVyuQ6wF4Df_g",
+    authDomain: "mototaxi-2b9d7.firebaseapp.com",
+    databaseURL: "https://mototaxi-2b9d7.firebaseio.com",
+    projectId: "mototaxi-2b9d7",
+    storageBucket: "mototaxi-2b9d7.appspot.com",
+    messagingSenderId: "424969414739"
   };
   firebase.initializeApp(config);
-
 
 
 
