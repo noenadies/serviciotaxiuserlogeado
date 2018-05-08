@@ -460,8 +460,8 @@ function myFunction2(){
 
 firebase.database().ref().child("taxis").child(String(this.name)).child("activo").set(this.activom);
    this.activom="a";
-firebase.database().ref().child("taxis").child(String(this.name)).child("latuser").set(vlatuser);
-firebase.database().ref().child("taxis").child(String(this.name)).child("lnguser").set(vlnguser);
+firebase.database().ref().child("taxis").child(String(this.name)).child("latuser").set(vnodelat);
+firebase.database().ref().child("taxis").child(String(this.name)).child("lnguser").set(vnodelng);
  
  firebase.database().ref().child("taxis").child(String(this.name)).child("activo").set("b");
 for(var  vm in markers){
