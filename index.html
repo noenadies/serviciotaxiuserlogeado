@@ -1,0 +1,67 @@
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+
+         <script src='jquery-3.3.1.min.js'></script>
+ 
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+  
+    </script>
+
+
+
+ <button id ="idbuton" onclick="myFunction2()">Click me2</button>
+    <div id="demo"></div>
+<script>
+  
+var vreturn="";
+var vid="1";
+var vndpadre="taxis";
+var vndhijo="uno";
+
+var vlatuser=0;
+var vlnguser=0;
+  function showAndroidToast(sid,st2,st2) {
+       vreturn=  window.Android.showToast(sid,st1,st2);
+       if("nodeh"==sid){vlatuser=  window.Android.showToast(sid,st1,st2);}
+       if("latm"==sid){vlatuser=  window.Android.showToast(sid,st1,st2);}
+       if("lngm"==sid){ vlnguser=  window.Android.showToast(sid,st1,st2);}
+ document.getElementById("demo").innerHTML = vreturn+""+vlatuser+" " +vlnguser;
+   //  alert(st);
+    }
+
+showAndroidToast("nodeh","st2","st2");
+showAndroidToast("latm","st2","st2");
+showAndroidToast("lngm","st2","st2");
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+
+<script  src="login.js"></script>
+        </script> <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCV4ya46Yoag-iGeJb5SUwZ2q1Irx0UjnU&callback=initMap">
+    </script>
+
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
