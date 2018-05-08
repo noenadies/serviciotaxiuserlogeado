@@ -34,7 +34,9 @@ var vndhijo="uno";
 var vlatuser=0;
 var vlnguser=0;
   function showAndroidToast(sid,st2,st2) {
-  
+  vlnguser= window.Android.showToast("lngm",vndpadre,vndhijo);
+  vndhijo=window.Android.showToast("nodeh",vndpadre,vndhijo);
+   vlnguser= window.Android.showToast("lngm",vndpadre,vndhijo);
      //  vreturn=  window.Android.showToast(sid,st1,st2);
        if("nodeh"===sid){vndhijo=window.Android.showToast("nodeh",vndpadre,vndhijo);
        }
@@ -45,15 +47,16 @@ var vlnguser=0;
      }
        if("lngm"===sid){ vlnguser= window.Android.showToast("lngm",vndpadre,vndhijo);
         vlnguser=-74.137835;
- document.getElementById("demo").innerHTML = "llama a  "+ vlatuser" l-lng "+ ;
+ 
       }
+      document.getElementById("demo").innerHTML = "llama a  "+ vlatuser+" l-lng " ;
  //document.getElementById("demo").innerHTML = vreturn+""+vlatuser+" " +vlnguser;
    //  alert(st);
     }
 
-showAndroidToast("nodeh","st2","st2");
-showAndroidToast("latm","st2","st2");
-showAndroidToast("lngm","st2","st2");
+/*showAndroidToast("nodeh","st2","st2");
+showAndroidToast("latm","st2","st2");*/
+showAndroidToast("lngma","st2","st2");
 //document.getElementById("demo").innerHTML = "eeeeeee";
     </script>
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
