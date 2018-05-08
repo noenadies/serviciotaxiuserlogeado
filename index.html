@@ -24,7 +24,7 @@
 
 
  <button id ="idbuton" onclick="myFunction2()">Click me2</button>
-    <div id="demo"></div>
+    <div ><p id="demo">This is some text in a paragraph.</p></div>
 <script>
   
 var vreturn="";
@@ -34,6 +34,7 @@ var vndhijo="uno";
 
 var vlatuser=0;
 var vlnguser=0;
+
   function showAndroidToast(sid,st2,st2) {
        vreturn=  window.Android.showToast(sid,st1,st2);
        if("nodeh"==sid){vlatuser=  window.Android.showToast(sid,st1,st2);}
@@ -46,6 +47,7 @@ var vlnguser=0;
 showAndroidToast("nodeh","st2","st2");
 showAndroidToast("latm","st2","st2");
 showAndroidToast("lngm","st2","st2");
+//document.getElementById("demo").innerHTML = "eeeeeee";
     </script>
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
 
