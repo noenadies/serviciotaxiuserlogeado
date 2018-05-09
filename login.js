@@ -447,6 +447,7 @@ function myFunction2(){
             idnodefirebase:objh[id],
             icon: image,
             taxista:general[id].nombre,
+            placas:general[id].placas,
 
             activom:"b",
                animation: google.maps.Animation.DROP
@@ -481,7 +482,7 @@ firebase.database().ref().child("taxis").child(String(this.name)).child("lnguser
 
 firebase.database().ref().child("taxis").child(String(this.name)).child("usuario").set(vndhijo);
 
-vntaxista= window.Android.showToast("subirtaxista",String(this.taxista),String("this.taxista334"));
+vntaxista= window.Android.showToast("subirtaxista",String(this.taxista),String(this.placas));
 
 
 document.getElementById("demo").innerHTML = "yo usuario "+vndhijo+" taxi " +this.taxista+" node taxis"+this.name +" "+ vlatuser+ "lat y lng"+ vlnguser ;
