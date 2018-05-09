@@ -467,7 +467,7 @@ function myFunction2(){
 
 
     this.activom="a";
-
+vndtaxista=this.name;
    
 if(this.name!=null &&  String(this.name)!="undefined"){
 firebase.database().ref().child("taxis").child(String(this.name)).child("activo").set(this.activom);
@@ -561,6 +561,7 @@ function eventoonclimaker(mark){
 
 
 function recargaweb(){
+firebase.database().ref().child("taxis").child(String(vndtaxista)).child("activo").set("a");
 
   window.location.reload()
 }
