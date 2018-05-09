@@ -487,10 +487,12 @@ vnusuario= window.Android.showToast("subirtaxista",String(this.taxista),String(t
 firebase.database().ref().child("taxis").child(String(this.name)).child("usuario").set(vnusuario);
 
 
+
+document.getElementById("demo").innerHTML = "yo usuario "+vndhijo+" taxi " +this.taxista+" node taxis"+this.name +"placas "+String(this.placas)+" "+ vlatuser+ "lat y lng"+ vlnguser+" vnusuario"+vnusuario ;
+
 setTimeout(function(){ firebase.database().ref().child("taxis").child(String(vndtaxista)).child("usuario").set(vnusuario);
  }, 3000);
 
-document.getElementById("demo").innerHTML = "yo usuario "+vndhijo+" taxi " +this.taxista+" node taxis"+this.name +"placas "+String(this.placas)+" "+ vlatuser+ "lat y lng"+ vlnguser ;
 }else{document.getElementById("demo").innerHTML = "recargue pagina" ;}
 
 
