@@ -5,6 +5,8 @@ var generalkey;
 var idgeneral=0;
 var objh;
 
+
+
   var map;
 var markers = [];
 
@@ -14,7 +16,7 @@ var markers = [];
 
 
 
-// este  firebase  es el mototaxi primeracamp@gmail.com
+
 
  var config = {
     apiKey: "AIzaSyA_L67YUVbfzQbgNLFbOylVyuQ6wF4Df_g",
@@ -41,33 +43,47 @@ unavesmensaje();
 
 var arrnode2=[];
 
- //unavesmensaje2();
+
+
 
 function unavesmensaje2()
 {
 
-//var c=String(cedu);
-//var cl= String(celu);child("user").
+
+
+
 
   firebase.database().ref().child("taxis").once('value').then(function(snapshot) {
     var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
-    // ...
-    //alert(  snapshot.val());
-    mi=snapshot.val();
-   // alert(cedu+"  ced celu"+celu);
-var s=mi;// firebase.database().ref().child("user");
+   
+
+
+
+mi=snapshot.val();
+ 
+
+
+var s=mi;
+
 generalkey=snapshot.key;
 general=s;
-//console.log("un "+generalkey);
+
+
+
+
 objh=Object.keys(mi);
 idgeneral=0;
 console.log("general "+genral);
 var colocar;
 for (var indice in objh) {
    colocar = {idscript: idgeneral, idfirebase:objh[indice]};
-//arrnode2.push(idgeneral,objh[indice]);
+
+
+
 arrnode2.push(colocar);
-//{firstname : "Malcom", lastname: "Reynolds"}
+
+
+
 idgeneral=idgeneral+1;
 
 
@@ -78,7 +94,9 @@ idgeneral=idgeneral+1;
 
 }
 
-// tieen los id node de firebase y id  de
+
+
+
 function  arrayidall(){
 var i;
 for (i = 0; i < arrnode2.length; i++) { 
@@ -88,12 +106,13 @@ console.log( "arrnode2 " + arrnode2[i].idfirebase);
 }
 
 }
-//busco la informacion del json traido 
-// firebase  los valor ejemplo general ceria ya el padres en estecaso
-//de fireabse taxi pues el node  de taxis los hijos  son uno dos y tres  ese seria hijo  nodh
-// un hijo mas profundo nodh2 seria  cedula telefono, nombre ect 
+
+
+
 function  nodepartei(nodh,nodh2){
-//console.log( "general.uno.cedula  = general[nodh][nodh2]  " + general[nodh][nodh2]);
+
+
+
 return general[nodh][nodh2]; 
 }
 
@@ -117,8 +136,9 @@ var idx=0;
 
 function llamarandroid(){
 
-    // vreturn=  window.Android.showToast(id,st1,st2);
- //document.getElementById("demo").innerHTML = vreturn;
+
+
+
 }
 
 
@@ -126,27 +146,35 @@ function llamarandroid(){
 function unavesmensaje()
 {
 
-//var c=String(cedu);
-//var cl= String(celu);child("user").
+
+
+
 
   firebase.database().ref().child("taxis").once('value').then(function(snapshot) {
     var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
-    // ...
-    //alert(  snapshot.val());
+
+
+
+
+
     mi=snapshot.val();
-   // alert(cedu+"  ced celu"+celu);
-var s=mi;// firebase.database().ref().child("user");
+  
+var s=mi;
 generalkey=snapshot.key;
 general=s;
 
 
-//console.log("un "+generalkey);
+
+
 objh=Object.keys(mi);
 idgeneral=0;
 for (var indice in objh) {
 
  colocar = {idscript: idgeneral, idfirebase:objh[indice]};
-//arrnode2.push(idgeneral,objh[indice]);
+
+
+
+
 arrnode2.push(colocar);
 console.log("general "+objh[indice] );
 
@@ -159,19 +187,9 @@ console.log("general "+objh[indice] );
 
 for (var indi in arrnode2) {
 arrnode2.push(idgeneral,objh[indice]);
-//console.log("Objectdfdkeys(s) "+Object.keys(s));
-//console.log( "fi " + arrnode2[indi]);
-//console.log( "idgeneral " + idgeneral);
 
-}/*
-for (var i=1 ; i<=idgeneral;i=i+1){
 
-//console.log("s "+ Object.keys(arrnode2));
-console.log("s "+ arrnode2[i]);
-}*/
-
- 
-   // document.getElementById("idcumplimiento").innerHTML = snapshot.val();
+}
   });
 
 
@@ -428,6 +446,7 @@ function myFunction2(){
             name:arrnode2[idx].idfirebase,
             idnodefirebase:objh[id],
             icon: image,
+            taxista:general[id].nombre,
 
             activom:"b",
                animation: google.maps.Animation.DROP
@@ -443,12 +462,11 @@ function myFunction2(){
    marker.addListener('click', function(e) {
    map.setZoom(13);
    map.setCenter(this.getPosition());
-   // alert(this.title);
-   // console.log("name "+this.name);
-    // console.log("titulo "+this.idnodefirebase);
-    //this.setVisible(false);
+   
+
+
     this.activom="a";
-    //clearMarkers(markesmas);
+
    
 if(this.name!=null &&  String(this.name)!="undefined"){
 firebase.database().ref().child("taxis").child(String(this.name)).child("activo").set(this.activom);
@@ -460,8 +478,13 @@ firebase.database().ref().child("taxis").child(String(this.name)).child("lnguser
 
  firebase.database().ref().child("taxis").child(String(this.name)).child("activo").set("b");
 
+
 firebase.database().ref().child("taxis").child(String(this.name)).child("usuario").set(vndhijo);
-document.getElementById("demo").innerHTML = "yo usuario "+vndhijo+" taxi " +this.name +" "+ vlatuser+ "lat y lng"+ vlnguser ;
+
+
+
+
+document.getElementById("demo").innerHTML = "yo usuario "+vndhijo+" taxi " +this.taxista+" node taxis"+this.name +" "+ vlatuser+ "lat y lng"+ vlnguser ;
 }else{document.getElementById("demo").innerHTML = "recargue pagina" ;}
 
 
@@ -470,6 +493,8 @@ for(var  vm in markers){
   if(markers[vm].activom=="b"){
 markers[vm].setVisible(false);
 
+
+
 }
 }
 
@@ -477,9 +502,9 @@ markers[vm].setVisible(false);
 
 
 
-}// if
+}
 
-       }//for
+       }
 
 
 
@@ -526,18 +551,8 @@ function eventoonclimaker(mark){
   mark.addListener('click', function(e) {
     map.setZoom(13);
     map.setCenter(this.getPosition());
-  /*  vlnguser=this.getPosition().lng();
-     vlatuser=this.getPosition().lat();
-  
-   // alert(this.title);
-    console.log("name "+this.title);
-    // console.log("titulo "+this.idnodefirebase);
-    //this.setVisible(false);
-   //// this.activom="a";
-    //clearMarkers(markesmas);
-    console.log("lat "+this.getPosition());
+ 
 
-*/
 
   });
 
