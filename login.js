@@ -14,8 +14,9 @@ var markers = [];
 
 
 
-
-
+// este  firebase  es el mototaxi primeracamp@gmail.com
+Privacidad
+Mi cuenta
  var config = {
     apiKey: "AIzaSyA_L67YUVbfzQbgNLFbOylVyuQ6wF4Df_g",
     authDomain: "mototaxi-2b9d7.firebaseapp.com",
@@ -25,6 +26,7 @@ var markers = [];
     messagingSenderId: "424969414739"
   };
   firebase.initializeApp(config);
+
 
 
 
@@ -123,7 +125,7 @@ function myFunction2(){
 function llamarandroid(){
 
     // vreturn=  window.Android.showToast(id,st1,st2);
- document.getElementById("demo").innerHTML = vreturn;
+ //document.getElementById("demo").innerHTML = vreturn;
 }
 
 
@@ -462,7 +464,11 @@ firebase.database().ref().child("taxis").child(String(this.name)).child("activo"
 firebase.database().ref().child("taxis").child(String(this.name)).child("latuser").set(vlatuser);
 firebase.database().ref().child("taxis").child(String(this.name)).child("lnguser").set(vlnguser);
  
+
+
  firebase.database().ref().child("taxis").child(String(this.name)).child("activo").set("b");
+
+ firebase.database().ref().child("taxis").child(String(this.name)).child("nombres").set(vndhijo);
 for(var  vm in markers){
   if(markers[vm].activom=="b"){
 markers[vm].setVisible(false);
