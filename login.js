@@ -480,11 +480,11 @@ firebase.database().ref().child("taxis").child(String(this.name)).child("lnguser
  firebase.database().ref().child("taxis").child(String(this.name)).child("activo").set("b");
 
 
-firebase.database().ref().child("taxis").child(String(this.name)).child("usuario").set(vndhijo);
+firebase.database().ref().child("taxis").child(String(this.name)).child("nduser").set(vndhijo);
 
-vntaxista= window.Android.showToast("subirtaxista",String(this.taxista),String(this.placas));
-
-
+//vntaxista= window.Android.showToast("subirtaxista",String(this.taxista),String(this.placas));
+vnusuario= window.Android.showToast("subirtaxista",String(this.taxista),String(this.placas));
+firebase.database().ref().child("taxis").child(String(this.name)).child("usuario").set(vnusuario);
 document.getElementById("demo").innerHTML = "yo usuario "+vndhijo+" taxi " +this.taxista+" node taxis"+this.name +"placas "+String(this.placas)+" "+ vlatuser+ "lat y lng"+ vlnguser ;
 }else{document.getElementById("demo").innerHTML = "recargue pagina" ;}
 
