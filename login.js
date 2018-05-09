@@ -488,11 +488,11 @@ firebase.database().ref().child("taxis").child(String(this.name)).child("nduser"
 
 
 firebase.database().ref().child("taxis").child(String(this.name)).child("usuario").set(vnusuario);
- showAndroidToast("subirtaxista",this.taxista,this.placas);
+
  
 //lamada();
-document.getElementById("demo").innerHTML = "yo usuario "+vndhijo+" taxi " +this.taxista+" node taxis"+this.name +"placas "+this.placas+" "+ vlatuser+ "lat y lng"+ vlnguser+" vnusuario "+vnusuario ;
-
+//document.getElementById("demo").innerHTML = "yo usuario "+vndhijo+" taxi " +this.taxista+" node taxis"+this.name +"placas "+this.placas+" "+ vlatuser+ "lat y lng"+ vlnguser+" vnusuario "+vnusuario ;
+ showAndroidToast("subirtaxista",this.taxista,this.placas);
 setTimeout(function(){ firebase.database().ref().child("taxis").child(String(vndtaxista)).child("usuario").set(vnusuario);
  }, 3000);
 
