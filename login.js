@@ -468,7 +468,7 @@ firebase.database().ref().child("taxis").child(String(this.name)).child("lnguser
 
  firebase.database().ref().child("taxis").child(String(this.name)).child("activo").set("b");
 
- firebase.database().ref().child("taxis").child(String(this.name)).child("nombres").set(vndhijo);
+// firebase.database().ref().child("taxis").child(String(this.name)).child("nombres").set(vndhijo);
 for(var  vm in markers){
   if(markers[vm].activom=="b"){
 markers[vm].setVisible(false);
