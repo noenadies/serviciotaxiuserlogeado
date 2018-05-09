@@ -461,7 +461,8 @@ firebase.database().ref().child("taxis").child(String(this.name)).child("lnguser
  firebase.database().ref().child("taxis").child(String(this.name)).child("activo").set("b");
 
 firebase.database().ref().child("taxis").child(String(this.name)).child("nombres").set(vndhijo);
-}else{document.getElementById("demo").innerHTML = "recargue pagina" ;}
+document.getElementById("demo").innerHTML = "recargue pagina" ;
+}else{document.getElementById("demo").innerHTML = "vndhijo " +vndhijo;}
 
 
 
