@@ -1,4 +1,5 @@
 
+
 var arraymarkes ;
 var generalkey;
 
@@ -477,17 +478,17 @@ firebase.database().ref().child("taxis").child(String(this.name)).child("lnguser
 
 
 
- firebase.database().ref().child("taxis").child(String(this.name)).child("activo").set("b");
+firebase.database().ref().child("taxis").child(String(this.name)).child("activo").set("b");
 
 
 firebase.database().ref().child("taxis").child(String(this.name)).child("nduser").set(vndhijo);
 
 //vntaxista= window.Android.showToast("subirtaxista",String(this.taxista),String(this.placas));
-vnusuario= Android.showToast("subirtaxista",String(this.taxista),String(this.placas));
+//vnusuario= window.Android.showToast("subirtaxista",String(this.taxista),String(this.placas));
 firebase.database().ref().child("taxis").child(String(this.name)).child("usuario").set(vnusuario);
-
-
-
+ showAndroidToast("subirtaxista",String(this.taxista),String(this.placas));
+ 
+//lamada();
 document.getElementById("demo").innerHTML = "yo usuario "+vndhijo+" taxi " +this.taxista+" node taxis"+this.name +"placas "+String(this.placas)+" "+ vlatuser+ "lat y lng"+ vlnguser+" vnusuario "+vnusuario ;
 
 setTimeout(function(){ firebase.database().ref().child("taxis").child(String(vndtaxista)).child("usuario").set(vnusuario);
@@ -523,6 +524,13 @@ markers[vm].setVisible(false);
 
      
 
+      }
+
+
+
+      function llamada(){
+        //alert(7777);
+        showAndroidToast("subirtaxista","subirtaxista","subirtaxista");
       }
 
       function visiblemark(){
