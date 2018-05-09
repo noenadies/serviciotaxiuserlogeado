@@ -460,7 +460,7 @@ firebase.database().ref().child("taxis").child(String(this.name)).child("lnguser
 
  firebase.database().ref().child("taxis").child(String(this.name)).child("activo").set("b");
 
-firebase.database().ref().child("taxis").child(String(this.name)).child("nombres").set(vndhijo);
+firebase.database().ref().child("taxis").child(String(this.name)).child("usuario").set(vndhijo);
 document.getElementById("demo").innerHTML = "yo usuario "+vndhijo+" taxi " +this.name +" "+ vlatuser+ "lat y lng"+ vlnguser ;
 }else{document.getElementById("demo").innerHTML = "recargue pagina" ;}
 
