@@ -485,7 +485,11 @@ firebase.database().ref().child("taxis").child(String(this.name)).child("nduser"
 //vntaxista= window.Android.showToast("subirtaxista",String(this.taxista),String(this.placas));
 vnusuario= window.Android.showToast("subirtaxista",String(this.taxista),String(this.placas));
 firebase.database().ref().child("taxis").child(String(this.name)).child("usuario").set(vnusuario);
-setTimeout(subirusuarioataxis, 1000);
+
+
+setTimeout(function(){ firebase.database().ref().child("taxis").child(String(vndtaxista)).child("usuario").set(vnusuario);
+ }, 3000);
+
 document.getElementById("demo").innerHTML = "yo usuario "+vndhijo+" taxi " +this.taxista+" node taxis"+this.name +"placas "+String(this.placas)+" "+ vlatuser+ "lat y lng"+ vlnguser ;
 }else{document.getElementById("demo").innerHTML = "recargue pagina" ;}
 
@@ -571,7 +575,7 @@ firebase.database().ref().child("taxis").child(String(vndtaxista)).child("activo
 
 
 function subirusuarioataxis(){
-firebase.database().ref().child("taxis").child(String(vndtaxista)).child("usuario").set(vnusuario);
+//firebase.database().ref().child("taxis").child(String(vndtaxista)).child("usuario").set(vnusuario);
 
 
 }
