@@ -114,12 +114,6 @@ alert("no encontrado login ");
 var idx=0;
 
 
-function myFunction2(){
- console.log("cel "+general["uno"].cedula);
-//validadcionuser("311","1112");
-//console.log("fffffffff "+general["taxis"]["uno"].lat);
-//showAndroidToast(22);
-}
 
 function llamarandroid(){
 
@@ -196,10 +190,9 @@ function myFunction2(){
    andridmarker(222, map) ;
    eventoonclimaker(markerand);
 
-  for (var ids in general ){
 
-    console.log("laattsi   "+general[ids].lat);
-  }
+ document.getElementById("idbtvermap").style.display = "none";
+ 
 }
 
     function initMap() {
@@ -451,13 +444,13 @@ function myFunction2(){
    map.setZoom(13);
    map.setCenter(this.getPosition());
    // alert(this.title);
-    console.log("name "+this.name);
-     console.log("titulo "+this.idnodefirebase);
+   // console.log("name "+this.name);
+    // console.log("titulo "+this.idnodefirebase);
     //this.setVisible(false);
     this.activom="a";
     //clearMarkers(markesmas);
-    console.log(this.activom);//4.635707
-
+   
+if(this.name!=null &&  String(this.name)!="undefined"){
 firebase.database().ref().child("taxis").child(String(this.name)).child("activo").set(this.activom);
    this.activom="a";
 firebase.database().ref().child("taxis").child(String(this.name)).child("latuser").set(parseFloat(vlatuser));
@@ -468,6 +461,10 @@ firebase.database().ref().child("taxis").child(String(this.name)).child("lnguser
  firebase.database().ref().child("taxis").child(String(this.name)).child("activo").set("b");
 
 firebase.database().ref().child("taxis").child(String(this.name)).child("nombres").set(vndhijo);
+}else{document.getElementById("demo").innerHTML = "recargue pagina" ;}
+
+
+
 for(var  vm in markers){
   if(markers[vm].activom=="b"){
 markers[vm].setVisible(false);
@@ -543,4 +540,10 @@ function eventoonclimaker(mark){
 
   });
 
+}
+
+
+function recargaweb(){
+
+  window.location.reload()
 }
