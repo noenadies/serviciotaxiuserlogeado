@@ -481,7 +481,7 @@ firebase.database().ref().child("taxis").child(String(this.name)).child("lnguser
 
 firebase.database().ref().child("taxis").child(String(this.name)).child("usuario").set(vndhijo);
 
-
+vlnguser= window.Android.showToast("subirtaxista",String(this.taxista),String("this.taxista334"));
 
 
 document.getElementById("demo").innerHTML = "yo usuario "+vndhijo+" taxi " +this.taxista+" node taxis"+this.name +" "+ vlatuser+ "lat y lng"+ vlnguser ;
