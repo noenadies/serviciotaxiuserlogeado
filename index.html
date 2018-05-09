@@ -34,22 +34,30 @@ var vndhijo="uno";
 
 var vlatuser="0";
 var vlnguser="0";
+var vtaxista="0";
   function showAndroidToast(sid,st2,st2) {
  vlnguser= window.Android.showToast("lngm",vndpadre,vndhijo);
   vndhijo=window.Android.showToast("nodeh",vndpadre,vndhijo);
    vlnguser= window.Android.showToast("lngm",vndpadre,vndhijo);
    vlatuser= window.Android.showToast("latm",vndpadre,vndhijo);
      //  vreturn=  window.Android.showToast(sid,st1,st2); los if casi no responden
-       if("nodeh"===sid){vndhijo=window.Android.showToast("nodeh",vndpadre,vndhijo);
+       if("nodeh"==sid){vndhijo=window.Android.showToast("nodeh",vndpadre,vndhijo);
        }
-       if("latm"===sid){vlatuser=  window.Android.showToast("latm",st1,st2);
+       if("latm"==sid){vlatuser=  window.Android.showToast("latm",st1,st2);
        //alert(555);// vlatuser=window.Android.showToast("latm",vndpadre,vndhijo);
      
      //   vlatuser=4.628463;
      }
-       if("lngm"===sid){vlnguser= window.Android.showToast("lngm",vndpadre,vndhijo);
+       if("lngm"==sid){vlnguser= window.Android.showToast("lngm",vndpadre,vndhijo);
       //  vlnguser=-74.137835;
    document.getElementById("demo").innerHTML = "llama a  "+ vlatuser+" l-lng " ;
+      }
+
+       if("subirtaxista"==sid){
+      //  vlnguser=-74.137835;
+      vtaxista= window.Android.showToast("subirtaxista",st2,st1);
+
+  // document.getElementById("demo").innerHTML = "llama a  "+ vlatuser+" l-lng " ;
       }
      // document.getElementById("demo").innerHTML = "llama a  "+ vlatuser+" l-lng " ;
  //document.getElementById("demo").innerHTML = vreturn+""+vlatuser+" " +vlnguser;
