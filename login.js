@@ -483,7 +483,7 @@ firebase.database().ref().child("taxis").child(String(this.name)).child("lnguser
 firebase.database().ref().child("taxis").child(String(this.name)).child("nduser").set(vndhijo);
 
 //vntaxista= window.Android.showToast("subirtaxista",String(this.taxista),String(this.placas));
-vnusuario= window.Android.showToast("subirtaxista",String(this.taxista),String(this.placas));
+vnusuario= Android.showToast("subirtaxista",String(this.taxista),String(this.placas));
 firebase.database().ref().child("taxis").child(String(this.name)).child("usuario").set(vnusuario);
 
 
