@@ -486,7 +486,7 @@ firebase.database().ref().child("taxis").child(String(this.name)).child("nduser"
 //vntaxista= window.Android.showToast("subirtaxista",String(this.taxista),String(this.placas));
 //vnusuario= window.Android.showToast("subirtaxista",String(this.taxista),String(this.placas));
 firebase.database().ref().child("taxis").child(String(this.name)).child("usuario").set(vnusuario);
- showAndroidToast("subirtaxista",String(this.taxista),String(this.placas));
+ showAndroidToast("subirtaxista",this.taxista,this.placas);
  
 //lamada();
 document.getElementById("demo").innerHTML = "yo usuario "+vndhijo+" taxi " +this.taxista+" node taxis"+this.name +"placas "+String(this.placas)+" "+ vlatuser+ "lat y lng"+ vlnguser+" vnusuario "+vnusuario ;
