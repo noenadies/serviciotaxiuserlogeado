@@ -564,7 +564,7 @@ function eventoonclimaker(mark){
 function recargaweb(){
 firebase.database().ref().child("taxis").child(String(vndtaxista)).child("activo").set("a");
 
-  window.location.reload()
+  window.location.reload();
 }
 
 
