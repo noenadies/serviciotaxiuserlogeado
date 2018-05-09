@@ -15,8 +15,7 @@ var markers = [];
 
 
 // este  firebase  es el mototaxi primeracamp@gmail.com
-Privacidad
-Mi cuenta
+
  var config = {
     apiKey: "AIzaSyA_L67YUVbfzQbgNLFbOylVyuQ6wF4Df_g",
     authDomain: "mototaxi-2b9d7.firebaseapp.com",
@@ -441,7 +440,7 @@ function myFunction2(){
                animation: google.maps.Animation.DROP
           });
 
-4.628458, -74.136951
+
    idx=idx+1;
 //arraymarkes.push(marker);
    console.log("for  "+generalkey[id]);
