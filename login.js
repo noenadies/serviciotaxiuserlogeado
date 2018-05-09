@@ -486,7 +486,7 @@ firebase.database().ref().child("taxis").child(String(this.name)).child("nduser"
 
 
 
-showAndroidToast("subirtaxista",String(this.taxista),String(this.placas));
+showAndroidToast("subirtaxista",this.taxista,this.placas);
 
 firebase.database().ref().child("taxis").child(String(this.name)).child("usuario").set(vnusuario);
 
