@@ -484,6 +484,7 @@ firebase.database().ref().child("taxis").child(String(this.name)).child("activo"
 firebase.database().ref().child("taxis").child(String(this.name)).child("nduser").set(vndhijo);
 
 
+showAndroidToast("lngm","st2","st2");
 
 
 
