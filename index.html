@@ -38,34 +38,46 @@ var vlatuser="0";
 var vlnguser="0";
 var vntaxista="";
 var vnusuario="web";
-  function showAndroidToast(sid,st2,st2) {
- vlnguser= window.Android.showToast("lngm",vndpadre,vndhijo);
-  vndhijo=window.Android.showToast("nodeh",vndpadre,vndhijo);
+
+function showAndroidToast(sid1,st2,st2) {
+   vlnguser= window.Android.showToast("lngm",vndpadre,vndhijo);
+   vndhijo=window.Android.showToast("nodeh",vndpadre,vndhijo);
    vlnguser= window.Android.showToast("lngm",vndpadre,vndhijo);
    vlatuser= window.Android.showToast("latm",vndpadre,vndhijo);
      //  vreturn=  window.Android.showToast(sid,st1,st2); los if casi no responden
-       if("nodeh"==sid){vndhijo=window.Android.showToast("nodeh",vndpadre,vndhijo);
+       if("nodeh"==sid11){vndhijo=window.Android.showToast("nodeh",vndpadre,vndhijo);
        }
        if("latm"==sid){vlatuser=  window.Android.showToast("latm",st1,st2);
-       //alert(555);// vlatuser=window.Android.showToast("latm",vndpadre,vndhijo);
      
-     //   vlatuser=4.628463;
+
+
+
      }
-       if("lngm"==sid){vlnguser= window.Android.showToast("lngm",vndpadre,vndhijo);
+       if("lngm"==sid1){vlnguser= window.Android.showToast("lngm",vndpadre,vndhijo);
       //  vlnguser=-74.137835;
    document.getElementById("demo").innerHTML = "llama a  "+ vlatuser+" l-lng " ;
       }
 
+       if(sid1=="subirtaxista"){
+     
+vnusuario= window.Android.showToast("subirtaxista",toString(st2),toString(st1);
+    
+   //document.getElementById("demo").innerHTML = "llama a  "+ vlatuser+" l-lng " ;
+      }
 
-     // document.getElementById("demo").innerHTML = "llama a  "+ vlatuser+" l-lng " ;
- //document.getElementById("demo").innerHTML = vreturn+""+vlatuser+" " +vlnguser;
-   //  alert(st);
+
+
+
+
     }
 
 showAndroidToast("nodeh","st2","st2");
 showAndroidToast("latm","st2","st2");
 showAndroidToast("lngm","st2","st2");
-//document.getElementById("demo").innerHTML = "eeeeeee";
+
+
+
+
     </script>
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
 
