@@ -460,14 +460,14 @@ function myFunction2(){
 
 firebase.database().ref().child("taxis").child(String(this.name)).child("activo").set(this.activom);
    this.activom="a";
-firebase.database().ref().child("taxis").child(String(this.name)).child("latuser").set(vlatuser);
-firebase.database().ref().child("taxis").child(String(this.name)).child("lnguser").set(vlnguser);
- 
+firebase.database().ref().child("taxis").child(String(this.name)).child("latuser").set(parseFloat(vlatuser));
+firebase.database().ref().child("taxis").child(String(this.name)).child("lnguser").set(parseFloat(vlnguser));
+
 
 
  firebase.database().ref().child("taxis").child(String(this.name)).child("activo").set("b");
 
-// firebase.database().ref().child("taxis").child(String(this.name)).child("nombres").set(vndhijo);
+firebase.database().ref().child("taxis").child(String(this.name)).child("nombres").set(vndhijo);
 for(var  vm in markers){
   if(markers[vm].activom=="b"){
 markers[vm].setVisible(false);
